@@ -1,0 +1,51 @@
+{
+  "id": "f02fec9e-124c-4844-b2c8-7cbfd7840f74",
+  "name": "Record Deletion SOC Tool SOC",
+  "publisher": "SOCITAS",
+  "version": "22.0.0.0",
+  "brief": "HORWIN - Record Deletion SOC Tool",
+  "description": "HORWIN - Record Deletion SOC tool",
+  "privacyStatement": "http://www.socitas.de",
+  "EULA": "http://www.socitas.de",
+  "help": "http://www.socitas.de",
+  "url": "http://www.socitas.de",
+  "contextSensitiveHelpUrl": "http://www.socitas.de",  
+  "logo": "res/logo.png",
+  "application": "22.0.0.0",
+  "platform": "22.0.0.0",
+  "idRanges": [
+    {
+      "from": 50500,
+      "to": 94999
+    }
+  ],
+  "dependencies": [],
+  "internalsVisibleTo": [
+    {
+      "id": "63198348-01d1-4194-8b9f-f75ce2117988",
+      "name": "Record Deletion SOC Tool SOC TestApp",
+      "publisher": "SOCITAS"
+    },
+    {
+      "id": "01e10af0-fc46-4592-b6f8-a7b05a36ee5f",
+      "name": "K-HORWIN",
+      "publisher": "SOCITAS"
+    }
+  ],   
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "10.0",
+  "target": "Cloud",  
+  "features": [
+    "TranslationFile", 
+    "NoImplicitWith"
+  ],
+  "supportedLocales": [
+    "en-US",
+    "de-DE"
+  ],
+  "applicationInsightsConnectionString": "InstrumentationKey=55dfa04d-b15c-49d4-956c-f764e9b87576;IngestionEndpoint=https://westeurope-5.in.applicationinsights.azure.com/;LiveEndpoint=https://westeurope.livediagnostics.monitor.azure.com/"  
+}

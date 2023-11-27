@@ -1,0 +1,45 @@
+{
+  "id": "63198348-01d1-4194-8b9f-f75ce2117988",
+  "name": "Record Deletion SOC Tool SOC TestApp",
+  "publisher": "SOCITAS",
+  "version": "21.0.0.0",
+  "brief": "Various Tests",
+  "description": "Various Tests",
+  "privacyStatement": "http://www.socitas.de",
+  "EULA": "http://www.socitas.de",
+  "help": "http://www.socitas.de",
+  "url": "http://www.socitas.de",
+  "contextSensitiveHelpUrl": "http://www.socitas.de",  
+  "logo": "res/logo.png",
+  "application": "21.0.0.0",
+  "platform": "21.0.0.0",
+  "idRanges": [
+    {
+      "from": 95000,
+      "to": 99999
+    }
+  ],
+  "dependencies": [
+    {
+      "id": "f02fec9e-124c-4844-b2c8-7cbfd7840f74",
+      "name": "Record Deletion SOC Tool SOC",
+      "publisher": "SOCITAS",
+      "version": "21.0.0.0"
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "10.0",
+  "target": "Cloud",  
+  "features": [
+    "TranslationFile", 
+    "NoImplicitWith"
+  ],
+  "supportedLocales": [
+    "en-US",
+    "de-DE"
+  ]
+}

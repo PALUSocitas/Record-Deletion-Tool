@@ -1,0 +1,24 @@
+{
+  "folders": [
+    {
+      "path": "app"
+    },
+    {
+      "path": "test"
+    }
+  ],
+  "settings": {
+    "todo-tree.general.tags": [
+      "BUG",
+      "FIXME",
+      "TODO",
+      "REFACT"
+    ],
+    "git.confirmSync": false,
+    "git.postCommitCommand": "sync",
+    "objectIdNinja.backEndUrl": "socfaalninja.azurewebsites.net",
+    "objectIdNinja.backEndAPIKey": "QQQkuWPjnqzcZBZPreLt+oN0Ppoll1h6WMaS4wIOaNcAtyv5Kaq4RxefthgIWzwR0Dh5j3MfOsQDzpE4GUr76Q==",
+    "objectIdNinja.backEndUrlPoll": "socfaalpoll.azurewebsites.net",
+    "objectIdNinja.backEndAPIKeyPoll": "Qgt5Nc/Ovy0H0jNlJS8jai8XjiId1AAEDwXNUgjycOZI+jFrCfhZWWkV23c5i2eMaEBg8L1aiLdbkG2F/Mn9EQ==",
+  }
+}

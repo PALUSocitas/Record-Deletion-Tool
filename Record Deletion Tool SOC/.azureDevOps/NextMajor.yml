@@ -1,0 +1,59 @@
+trigger: 
+- none
+
+schedules:
+- cron: '0 0 * * *'
+  displayName: Record Deletion Tool SOC - Daily Next Major
+  branches:
+    include:
+    - main
+  always: true
+
+pool:
+  name: SOCITAS
+
+variables:
+- group: KeyVault
+
+jobs:
+- job: Build
+  timeoutInMinutes: 300
+  variables:
+    build.clean: all
+    platform: x64
+    version: "nextmajor"
+    appBuild: 2147483647
+    appRevision: 0
+    skipComponentGovernanceDetection: True
+
+  steps:
+  - task: PowerShell@2
+    displayName: 'Run Pipeline'
+    env:
+      InsiderSasToken: '$(InsiderSasToken)'
+      LicenseFile: '$(BcLicenseFile)'
+      CodeSignCertPfxFile: '$(CodeSignCertPfxFile)'
+      CodeSignCertPfxPassword: '$(CodeSignCertPfxPassword)'
+    inputs:
+      targetType: filePath
+      filePath: 'scripts\DevOps-Pipeline.ps1'
+      arguments: '-environment "AzureDevOps" -version "$(version)" -appBuild $(appBuild) -appRevision $(appRevision)'
+      failOnStderr: true
+
+  - task: PublishTestResults@2
+    displayName: 'Publish Test Results'
+    condition: and(succeeded(),ne(variables['TestResults'],''))
+    inputs:
+      testResultsFormat: JUnit
+      testResultsFiles: '$(testResults)'
+      failTaskOnFailedTests: true
+  
+  - task: PowerShell@2
+    displayName: 'Cleanup'
+    condition: always()
+    inputs:
+      targetType: filePath
+      filePath: 'scripts\Cleanup.ps1'
+      arguments: '-environment "AzureDevOps"'
+      failOnStderr: false
+
