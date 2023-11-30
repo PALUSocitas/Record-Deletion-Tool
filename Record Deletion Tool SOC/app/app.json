@@ -1,10 +1,10 @@
 {
   "id": "f02fec9e-124c-4844-b2c8-7cbfd7840f74",
-  "name": "Record Deletion SOC Tool SOC",
+  "name": "K - HORWIN - Record Deletion SOC",
   "publisher": "SOCITAS",
   "version": "22.0.0.0",
-  "brief": "HORWIN - Record Deletion SOC Tool",
-  "description": "HORWIN - Record Deletion SOC tool",
+  "brief": "HORWIN - Record Deletion SOC",
+  "description": "HORWIN - Record Deletion SOC",
   "privacyStatement": "http://www.socitas.de",
   "EULA": "http://www.socitas.de",
   "help": "http://www.socitas.de",
@@ -23,7 +23,7 @@
   "internalsVisibleTo": [
     {
       "id": "63198348-01d1-4194-8b9f-f75ce2117988",
-      "name": "Record Deletion SOC Tool SOC TestApp",
+      "name": "Record Deletion SOC",
       "publisher": "SOCITAS"
     },
     {
