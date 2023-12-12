@@ -1,96 +1,96 @@
 codeunit 50500 "Record Deletion Mgt. SOC"
 {
     Permissions =
-    TableData 17 = IMD,
-    Tabledata 21 = IMD,
-    Tabledata 25 = IMD,
-    Tabledata 32 = IMD,
-    Tabledata 36 = IMD,
-    Tabledata 37 = IMD,
-    Tabledata 38 = IMD,
-    Tabledata 39 = IMD,
-    Tabledata 45 = IMD,
-    Tabledata 46 = IMD,
-    Tabledata 81 = IMD,
-    Tabledata 110 = IMD,
-    TableData 111 = IMD,
-    TableData 112 = IMD,
-    TableData 113 = IMD,
-    TableData 114 = IMD,
-    TableData 115 = IMD,
-    TableData 120 = IMD,
-    Tabledata 121 = IMD,
-    Tabledata 122 = IMD,
-    Tabledata 123 = IMD,
-    Tabledata 124 = IMD,
-    Tabledata 125 = IMD,
-    Tabledata 169 = IMD,
-    Tabledata 203 = IMD,
-    Tabledata 253 = IMD,
-    Tabledata 254 = IMD,
-    Tabledata 271 = IMD,
-    Tabledata 281 = IMD,
-    Tabledata 298 = IMD,
-    Tabledata 300 = IMD,
-    Tabledata 305 = IMD,
-    Tabledata 337 = IMD,
-    Tabledata 339 = IMD,
-    Tabledata 379 = IMD,
-    Tabledata 380 = IMD,
-    Tabledata 405 = IMD,
-    Tabledata 474 = IMD,
-    Tabledata 552 = IMD,
-    Tabledata 5802 = IMD,
-    tabledata 6650 = IMD,
-    tabledata 6660 = IMD,
-    tabledata 86 = IMD,
-    tabledata 87 = IMD,
-    tabledata 240 = IMD,
-    tabledata 241 = IMD,
-    tabledata 272 = IMD,
-    tabledata 274 = IMD,
-    tabledata 276 = IMD,
-    tabledata 297 = IMD,
-    tabledata 304 = IMD,
-    tabledata 309 = IMD,
-    tabledata 426 = IMD,
-    tabledata 355 = IMD,
-    tabledata 356 = IMD,
-    tabledata 357 = IMD,
-    tabledata 361 = IMD,
-    tabledata 369 = IMD,
-    tabledata 388 = IMD,
-    tabledata 441 = IMD,
-    tabledata 442 = IMD,
-    tabledata 5106 = IMD,
-    tabledata 5107 = IMD,
-    tabledata 5108 = IMD,
-    tabledata 5109 = IMD,
-    tabledata 5110 = IMD,
-    tabledata 6651 = IMD,
-    tabledata 6661 = IMD,
-    tabledata 7159 = IMD,
-    tabledata 7316 = IMD,
-    tabledata 7317 = IMD,
-    tabledata 7318 = IMD,
-    tabledata 7319 = IMD,
-    tabledata 7320 = IMD,
-    tabledata 7321 = IMD,
-    tabledata 7322 = IMD,
-    tabledata 7323 = IMD,
-    tabledata 7340 = IMD,
-    tabledata 7341 = IMD,
-    tabledata 7342 = IMD,
-    tabledata 7343 = IMD;
+    tabledata "G/L Entry" = IMD,
+    tabledata "Cust. Ledger Entry" = IMD,
+    tabledata "Vendor Ledger Entry" = IMD,
+    tabledata "Item Ledger Entry" = IMD,
+    tabledata "Sales Header" = IMD,
+    tabledata "Sales Line" = IMD,
+    tabledata "Purchase Header" = IMD,
+    tabledata "Purchase Line" = IMD,
+    tabledata "G/L Register" = IMD,
+    tabledata "Item Register" = IMD,
+    tabledata "Gen. Journal Line" = IMD,
+    tabledata "Sales Shipment Header" = IMD,
+    tabledata "Sales Shipment Line" = IMD,
+    tabledata "Sales Invoice Header" = IMD,
+    tabledata "Sales Invoice Line" = IMD,
+    tabledata "Sales Cr.Memo Header" = IMD,
+    tabledata "Sales Cr.Memo Line" = IMD,
+    tabledata "Purch. Rcpt. Header" = IMD,
+    tabledata "Purch. Rcpt. Line" = IMD,
+    tabledata "Purch. Inv. Header" = IMD,
+    tabledata "Purch. Inv. Line" = IMD,
+    tabledata "Purch. Cr. Memo Hdr." = IMD,
+    tabledata "Purch. Cr. Memo Line" = IMD,
+    tabledata "Job Ledger Entry" = IMD,
+    tabledata "Res. Ledger Entry" = IMD,
+    tabledata "G/L Entry - VAT Entry Link" = IMD,
+    tabledata "VAT Entry" = IMD,
+    tabledata "Bank Account Ledger Entry" = IMD,
+    tabledata "Phys. Inventory Ledger Entry" = IMD,
+    tabledata "Issued Reminder Line" = IMD,
+    tabledata "Reminder/Fin. Charge Entry" = IMD,
+    tabledata "Issued Fin. Charge Memo Line" = IMD,
+    tabledata "Reservation Entry" = IMD,
+    tabledata "Item Application Entry" = IMD,
+    tabledata "Detailed Cust. Ledg. Entry" = IMD,
+    tabledata "Detailed Vendor Ledg. Entry" = IMD,
+    tabledata "Change Log Entry" = IMD,
+    tabledata "Job Queue Log Entry" = IMD,
+    tabledata "VAT Rate Change Log Entry" = IMD,
+    tabledata "Value Entry" = IMD,
+    tabledata "Return Shipment Header" = IMD,
+    tabledata "Return Receipt Header" = IMD,
+    tabledata "Exch. Rate Adjmt. Reg." = IMD,
+    tabledata "Date Compr. Register" = IMD,
+    tabledata "Resource Register" = IMD,
+    tabledata "Job Register" = IMD,
+    tabledata "Check Ledger Entry" = IMD,
+    tabledata "Bank Acc. Reconciliation Line" = IMD,
+    tabledata "Bank Account Statement Line" = IMD,
+    tabledata "Issued Reminder Header" = IMD,
+    tabledata "Issued Fin. Charge Memo Header" = IMD,
+    tabledata "No. Series Line" = IMD,
+    tabledata "IC Outbox Sales Line" = IMD,
+    tabledata "Dimension Set ID Filter Line" = IMD,
+    tabledata "Dim. Value per Account" = IMD,
+    tabledata "Gen. Jnl. Dim. Filter" = IMD,
+    tabledata "Analysis by Dim. Parameters" = IMD,
+    tabledata "Selected Dimension" = IMD,
+    tabledata "Dimension Translation" = IMD,
+    tabledata "Handled IC Inbox Jnl. Line" = IMD,
+    tabledata "IC Document Dimension" = IMD,
+    tabledata "Interaction Merge Data" = IMD,
+    tabledata "Sales Header Archive" = IMD,
+    tabledata "Sales Line Archive" = IMD,
+    tabledata "Purchase Header Archive" = IMD,
+    tabledata "Purchase Line Archive" = IMD,
+    tabledata "Return Shipment Line" = IMD,
+    tabledata "Return Receipt Line" = IMD,
+    tabledata "Analysis Selected Dimension" = IMD,
+    tabledata "Warehouse Receipt Header" = IMD,
+    tabledata "Warehouse Receipt Line" = IMD,
+    tabledata "Posted Whse. Receipt Header" = IMD,
+    tabledata "Posted Whse. Receipt Line" = IMD,
+    tabledata "Warehouse Shipment Header" = IMD,
+    tabledata "Warehouse Shipment Line" = IMD,
+    tabledata "Posted Whse. Shipment Header" = IMD,
+    tabledata "Posted Whse. Shipment Line" = IMD,
+    tabledata "Posted Invt. Put-away Header" = IMD,
+    tabledata "Posted Invt. Put-away Line" = IMD,
+    tabledata "Posted Invt. Pick Header" = IMD,
+    tabledata "Posted Invt. Pick Line" = IMD;
 
     procedure CalcRecordsInTable(TableNoToCheck: Integer): Integer
     var
-        Field: Record Field;
+        field: Record Field;
         RecordRef: RecordRef;
         NoOfRecords: Integer;
     begin
-        Field.SetRange(TableNo, TableNoToCheck);
-        if not Field.IsEmpty() then begin
+        field.SetRange(TableNo, TableNoToCheck);
+        if not field.IsEmpty() then begin
             RecordRef.Open(TableNoToCheck);
             RecordRef.LockTable();
             NoOfRecords := RecordRef.Count();
@@ -100,7 +100,7 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         exit(0);
     end;
 
-    procedure CheckTableRelations();
+    procedure CheckTableRelations()
     var
         Field: Record Field;
         Field2: Record Field;
@@ -122,7 +122,7 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         if not Confirm(CheckRelationsQst, false) then
             exit;
 
-        UpdateDialog.OPEN(CheckingRelationsTxt);
+        UpdateDialog.Open(CheckingRelationsTxt);
 
         RecordDeletionRelError.DeleteAll();
 
@@ -132,49 +132,49 @@ codeunit 50500 "Record Deletion Mgt. SOC"
                 // Only allow "normal" tables to avoid errors, Skip TableType MicrosoftGraph and CRM etc.
                 TableMetadata.SetRange(ID, RecordDeletion."Table ID");
                 TableMetadata.SetRange(TableType, TableMetadata.TableType::Normal);
-                if not TableMetadata.IsEmpty then begin
-                    RecordRef.OPEN(RecordDeletion."Table ID");
+                if not TableMetadata.IsEmpty() then begin
+                    RecordRef.Open(RecordDeletion."Table ID");
                     if RecordRef.FindSet() then
                         repeat
-                            field.SetRange(TableNo, RecordDeletion."Table ID");
-                            field.SetRange(Class, field.Class::Normal);
-                            field.SetFilter(RelationTableNo, '<>0');
-                            if field.FindSet() then
+                            Field.SetRange(TableNo, RecordDeletion."Table ID");
+                            Field.SetRange(Class, Field.Class::Normal);
+                            Field.SetFilter(RelationTableNo, '<>0');
+                            if Field.FindSet() then
                                 repeat
-                                    FieldRef := RecordRef.field(field."No.");
-                                    if (Format(FieldRef.VALUE) <> '') and (FORMAT(FieldRef.VALUE) <> '0') then begin
-                                        RecordRef2.OPEN(field.RelationTableNo);
+                                    FieldRef := RecordRef.Field(Field."No.");
+                                    if (Format(FieldRef.Value) <> '') and (Format(FieldRef.Value) <> '0') then begin
+                                        RecordRef2.Open(Field.RelationTableNo);
                                         SkipCheck := false;
-                                        if field.RelationFieldNo <> 0 then
-                                            FieldRef2 := RecordRef2.field(field.RelationFieldNo)
+                                        if Field.RelationFieldNo <> 0 then
+                                            FieldRef2 := RecordRef2.Field(Field.RelationFieldNo)
                                         else begin
-                                            KeyRec.Get(field.RelationTableNo, 1);  // PK
-                                            Field2.SetRange(TableNo, field.RelationTableNo);
+                                            KeyRec.Get(Field.RelationTableNo, 1);  // PK
+                                            Field2.SetRange(TableNo, Field.RelationTableNo);
                                             Field2.SetFilter(FieldName, CopyStr(KeyRec.Key, 1, 30));
                                             if Field2.FindFirst() then // No Match if Dual PK
-                                                FieldRef2 := RecordRef2.field(Field2."No.")
+                                                FieldRef2 := RecordRef2.Field(Field2."No.")
                                             else
                                                 SkipCheck := true;
                                         end;
-                                        if (FieldRef.TYPE = FieldRef2.TYPE) and (FieldRef.LENGTH = FieldRef2.LENGTH) and (not SkipCheck) then begin
-                                            FieldRef2.SetRange(FieldRef.VALUE);
+                                        if (FieldRef.Type = FieldRef2.Type) and (FieldRef.Length = FieldRef2.Length) and (not SkipCheck) then begin
+                                            FieldRef2.SetRange(FieldRef.Value);
                                             if not RecordRef2.FindFirst() then begin
-                                                RecordDeletionRelError.SetRange("Table ID", RecordRef.NUMBER);
+                                                RecordDeletionRelError.SetRange("Table ID", RecordRef.Number);
                                                 if RecordDeletionRelError.FindLast() then
                                                     EntryNo := RecordDeletionRelError."Entry No." + 1
                                                 else
                                                     EntryNo := 1;
                                                 RecordDeletionRelError.Init();
-                                                RecordDeletionRelError."Table ID" := RecordRef.NUMBER;
+                                                RecordDeletionRelError."Table ID" := RecordRef.Number;
                                                 RecordDeletionRelError."Entry No." := EntryNo;
-                                                RecordDeletionRelError."Field No." := FieldRef.NUMBER;
-                                                RecordDeletionRelError.Error := CopyStr(StrSubstNo(NotExistsTxt, Format(RecordRef.GETPOSITION()), Format(FieldRef2.NAME), Format(FieldRef.VALUE), Format(RecordRef2.NAME)), 1, 250);
+                                                RecordDeletionRelError."Field No." := FieldRef.Number;
+                                                RecordDeletionRelError.Error := CopyStr(StrSubstNo(NotExistsTxt, Format(RecordRef.GetPosition()), Format(FieldRef2.Name), Format(FieldRef.Value), Format(RecordRef2.Name)), 1, 250);
                                                 RecordDeletionRelError.Insert();
                                             end;
                                         end;
                                         RecordRef2.Close();
                                     end;
-                                until field.Next() = 0;
+                                until Field.Next() = 0;
                         until RecordRef.Next() = 0;
                     RecordRef.Close();
                 end;
@@ -182,14 +182,14 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         UpdateDialog.Close();
     end;
 
-    procedure ClearRecordsToDelete();
+    procedure ClearRecordsToDelete()
     var
         RecordDeletion: Record "Record Deletion SOC";
     begin
         RecordDeletion.ModifyAll("Delete Records", false);
     end;
 
-    procedure DeleteRecords(RunTrigger: Boolean);
+    procedure DeleteRecords(RunTrigger: Boolean)
     var
         RecordDeletionRelError: Record "Record Deletion Rel. Error SOC";
         RecordDeletion: Record "Record Deletion SOC";
@@ -209,13 +209,13 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         end;
 #pragma warning restore AA0005
 
-        UpdateDialog.OPEN(DeletingRecordsTxt);
+        UpdateDialog.Open(DeletingRecordsTxt);
 
         if RecordDeletion.FindSet() then
             repeat
                 if RecordDeletion."Delete Records" then begin
                     UpdateDialog.Update(1, Format(RecordDeletion."Table ID"));
-                    RecordRef.OPEN(RecordDeletion."Table ID");
+                    RecordRef.Open(RecordDeletion."Table ID");
                     RecordRef.DeleteAll(RunTrigger);
                     RecordRef.Close();
                     RecordDeletionRelError.SetRange("Table ID", RecordDeletion."Table ID");
@@ -226,7 +226,7 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         UpdateDialog.Close();
     end;
 
-    procedure InsertUpdateTables();
+    procedure InsertUpdateTables()
     var
         AllObjWithCaption: Record AllObjWithCaption;
         RecordDeletion: Record "Record Deletion SOC";
@@ -244,7 +244,7 @@ codeunit 50500 "Record Deletion Mgt. SOC"
 
     end;
 
-    procedure SetSuggestedTable(TableID: Integer);
+    procedure SetSuggestedTable(TableID: Integer)
     var
         RecordDeletion: Record "Record Deletion SOC";
     begin
@@ -254,7 +254,7 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         end;
     end;
 
-    procedure SuggestRecordsToDelete();
+    procedure SuggestRecordsToDelete()
     var
         RecordDeletion: Record "Record Deletion SOC";
         AfterSuggestionDeleteCount: Integer;
@@ -589,7 +589,7 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         Message(RecordsWereSuggestedMsg, AfterSuggestionDeleteCount - BeforeSuggestionDeleteCount);
     end;
 
-    procedure SuggestUnlicensedPartnerOrCustomRecordsToDelete();
+    procedure SuggestUnlicensedPartnerOrCustomRecordsToDelete()
     var
         RecordDeletion: Record "Record Deletion SOC";
         RecsSuggestedCount: Integer;
@@ -608,7 +608,7 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         Message(RecordsSuggestedMsg, RecsSuggestedCount);
     end;
 
-    procedure ViewRecords(RecordDeletion: Record "Record Deletion SOC");
+    procedure ViewRecords(RecordDeletion: Record "Record Deletion SOC")
     begin
         Hyperlink(GetUrl(ClientType::Current, CompanyName, ObjectType::Table, RecordDeletion."Table ID"));
     end;
@@ -618,7 +618,7 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         LicensePermission: Record "License Permission";
     begin
         // LicensePermission.Get(LicensePermission."Object Type"::Table, TableID);
-        LicensePermission.Get(LicensePermission."Object Type"::TableData, TableID);
+        LicensePermission.Get(LicensePermission."Object Type"::tabledata, TableID);
         if (LicensePermission."Read Permission" = LicensePermission."Read Permission"::" ") and
             (LicensePermission."Insert Permission" = LicensePermission."Insert Permission"::" ") and
             (LicensePermission."Modify Permission" = LicensePermission."Modify Permission"::" ") and

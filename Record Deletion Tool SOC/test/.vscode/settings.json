@@ -35,7 +35,7 @@
     "C:/Program Files/Microsoft Dynamics 365 Business Central/210/Service/Add-ins"
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.al": true,          
+    "source.fixAll.al": "explicit"
   },
   "alOutline.codeActionsOnSave": [
     "SortProcedures", "SortProperties", "SortReportColumns", "SortVariables",

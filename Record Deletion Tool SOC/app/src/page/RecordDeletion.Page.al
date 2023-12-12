@@ -6,6 +6,7 @@ page 50500 "Record Deletion SOC"
     PageType = List;
     SourceTable = "Record Deletion SOC";
     UsageCategory = Lists;
+    //Permissions = tabledata 1432 = rimd;
 
     layout
     {
