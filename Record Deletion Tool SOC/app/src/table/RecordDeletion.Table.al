@@ -1,6 +1,7 @@
 table 50500 "Record Deletion SOC"
 {
     DataClassification = CustomerContent;
+    Permissions = tabledata "Table Metadata" = r;
 
     fields
     {
@@ -17,13 +18,12 @@ table 50500 "Record Deletion SOC"
             Editable = false;
             FieldClass = FlowField;
         }
-#pragma warning disable AL0717
+
         field(20; "No. of Records"; Integer)
-#pragma warning restore AL0717
+
         {
             Caption = 'No. of Records';
             Editable = false;
-            FieldClass = FlowField;
             //CalcFormula = lookup ("Table Information Cache"."No. of Records" where("Company Name" = field(Company), "Table No." = field("Table ID")));
             //CalcFormula = lookup ("Table Information"."No. of Records" where("Company Name" = field(Company), "Table No." = field("Table ID")));
         }
@@ -43,6 +43,11 @@ table 50500 "Record Deletion SOC"
         {
             Caption = 'Company';
             DataClassification = CustomerContent;
+        }
+        field(50; ErrorText; Text[50])
+        {
+            Caption = 'Error Text';
+            Editable = false;
         }
 
 

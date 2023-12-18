@@ -4,9 +4,10 @@ page 50500 "Record Deletion SOC"
     ApplicationArea = All;
     Caption = 'Record Deletion SOC';
     PageType = List;
+    //Permissions = tabledata 1432 = rimd;
+    ShowFilter = true;
     SourceTable = "Record Deletion SOC";
     UsageCategory = Lists;
-    //Permissions = tabledata 1432 = rimd;
 
     layout
     {
@@ -40,6 +41,12 @@ page 50500 "Record Deletion SOC"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Specifies the value of the Delete Records field.';
+                }
+                field("Error Text"; rec.ErrorText)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Error Text';
+                    ToolTip = 'Specifies whether there was an Error while accessing the tables records';
                 }
                 // field(Company; Company)
                 // {
@@ -179,7 +186,13 @@ page 50500 "Record Deletion SOC"
         }
 
     }
+    trigger OnOpenPage()
+    begin
+        Rec.SetFilter("Table Name", '<>%1', '');
+        Rec.SetFilter(ErrorText, '%1', '');
+        CurrPage.Update();
+    end;
+
     var
         RecordDeletionMgt: Codeunit "Record Deletion Mgt. SOC";
-
 }

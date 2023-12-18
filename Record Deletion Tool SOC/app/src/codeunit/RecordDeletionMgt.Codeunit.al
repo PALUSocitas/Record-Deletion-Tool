@@ -86,18 +86,43 @@ codeunit 50500 "Record Deletion Mgt. SOC"
     procedure CalcRecordsInTable(TableNoToCheck: Integer): Integer
     var
         field: Record Field;
+        TableMetadata: Record "Table Metadata";
         RecordRef: RecordRef;
         NoOfRecords: Integer;
     begin
+
         field.SetRange(TableNo, TableNoToCheck);
         if not field.IsEmpty() then begin
             RecordRef.Open(TableNoToCheck);
-            RecordRef.LockTable();
-            NoOfRecords := RecordRef.Count();
+            If TableMetadata.Get(TableNoToCheck) then begin
+                RecordRef.LockTable();
+                NoOfRecords := RecordRef.Count();
+            end;
             RecordRef.Close();
             exit(NoOfRecords);
         end;
         exit(0);
+    end;
+
+    procedure CheckForErrors(var RecordDeletion: Record "Record Deletion SOC"): Text[50]
+    var
+        field: Record Field;
+        TableMetadata: Record "Table Metadata";
+        RecordRef: RecordRef;
+        //AbnormalErr: Label 'Table not of Type "Normal"';
+        PermissionErr: Label 'Permission Missing';
+    begin
+        field.SetRange(TableNo, RecordDeletion."Table ID");
+        if not field.IsEmpty() then begin
+            RecordRef.Open(RecordDeletion."Table ID");
+            If TableMetadata.Get(RecordDeletion."Table ID") then
+                if not (RecordRef.ReadPermission) then
+                    exit(PermissionErr);
+            // if not (TableMetadata.TableType = TableMetadata.TableType::Normal) then
+            //     exit(AbnormalErr);
+        end;
+        RecordRef.Close();
+        exit('');
     end;
 
     procedure CheckTableRelations()
@@ -230,16 +255,22 @@ codeunit 50500 "Record Deletion Mgt. SOC"
     var
         AllObjWithCaption: Record AllObjWithCaption;
         RecordDeletion: Record "Record Deletion SOC";
+        TableMetadata: Record "Table Metadata";
     begin
+        RecordDeletion.DeleteAll();
         AllObjWithCaption.SetRange("Object Type", AllObjWithCaption."Object Type"::Table);
         // Do not include system tables
-        AllObjWithCaption.SetFilter("Object ID", '< %1', 2000000001);
+        AllObjWithCaption.SetFilter("Object ID", '<%1&<>%2', 2000000001, 1432);
         if AllObjWithCaption.FindSet() then
             repeat
-                RecordDeletion.Init();
-                RecordDeletion."Table ID" := AllObjWithCaption."Object ID";
-                RecordDeletion.Company := CopyStr(CompanyName, 1, MaxStrLen(RecordDeletion.Company));
-                if RecordDeletion.Insert() then;
+                if TableMetadata.Get(AllObjWithCaption."Object ID") then
+                    if TableMetadata.TableType = TableMetadata.TableType::Normal then begin
+                        RecordDeletion.Init();
+                        RecordDeletion."Table ID" := AllObjWithCaption."Object ID";
+                        RecordDeletion.Company := CopyStr(CompanyName, 1, MaxStrLen(RecordDeletion.Company));
+                        RecordDeletion.ErrorText := CheckForErrors(RecordDeletion);
+                        if RecordDeletion.Insert() then;
+                    end;
             until AllObjWithCaption.Next() = 0;
 
     end;
@@ -648,5 +679,7 @@ codeunit 50500 "Record Deletion Mgt. SOC"
         end;
         exit(false);
     end;
+
+
 
 }
